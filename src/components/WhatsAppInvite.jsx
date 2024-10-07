@@ -1,5 +1,5 @@
 import React from 'react';
-import { inviteFriendsViaWhatsApp } from '../services/whatsapp';
+import { inviteFriendsViaWhatsApp } from './services/whatsapp';
 
 const WhatsAppInvite = () => {
   const handleInvite = () => {

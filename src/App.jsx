@@ -1,16 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
 
-// Directly importing page components without lazy loading
-import HomePage from './pages/HomePage';
-import CheckoutPage from './pages/CheckoutPage';
-import OrderConfirmationPage from './pages/OrderConfirmationPage';
-import SharedCartPage from './pages/SharedCartPage';
-// import NotFoundPage from './pages/NotFoundPage'; // Uncomment this if you have a NotFoundPage
+// Importing page components
+import HomePage from "./pages/HomePage.jsx";
+import CheckoutPage from "./pages/CheckoutPage.jsx";
+import OrderConfirmationPage from "./pages/OrderConfirmationPage.jsx";
+import SharedCartPage from "./pages/SharedCartPage.jsx";
+import Electronics from "./components/Electronics.jsx";
+import Clothing from "./components/Clothing.jsx";
+import Appliances from "./components/Appliances.jsx";
+import Sports from "./components/Sports.jsx";
+import LoginPage from './pages/Login.jsx';
+import SignupPage from './pages/Signup.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 
 const App = () => {
   return (
@@ -25,11 +31,13 @@ const App = () => {
                 <Route path="/checkout" element={<CheckoutPage />} />
                 <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
                 <Route path="/shared-cart/:id" element={<SharedCartPage />} />
-                {/* Uncomment below if you have a NotFoundPage */}
-                {/* 
-                <Route path="*" element={<NotFoundPage />} 
-                /> 
-                */}
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<SignupPage />} />
+                <Route path="/electronics" element={<Electronics />} />
+                <Route path="/clothing" element={<Clothing />} />
+                <Route path="/appliances" element={<Appliances />} />
+                <Route path="/sports" element={<Sports />} />
+                <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </ErrorBoundary>
           </main>
@@ -37,6 +45,7 @@ const App = () => {
         </div>
       </CartProvider>
     </Router>
+    
   );
 };
 
