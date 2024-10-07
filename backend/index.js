@@ -4,6 +4,8 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/routes');
+const cartRoutes = require('./routes/cartRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 
 dotenv.config();
@@ -15,6 +17,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/',userRoutes);
+app.use('/api', productRoutes); // Product-related routes (e.g., add, fetch products)
+app.use('/api', cartRoutes); // Cart-related routes (e.g., add to cart, view cart)
 
 
 // Database connection
