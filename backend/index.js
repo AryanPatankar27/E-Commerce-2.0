@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/routes');
 const cartRoutes = require('./routes/cartRoutes');
 const productRoutes = require('./routes/productRoutes');
+const environmentRoutes = require('./routes/enviormentRoutes'); 
+const readingRoutes = require('./routes/readingRoutes');
 
 
 dotenv.config();
@@ -19,6 +21,9 @@ app.use(express.json());
 app.use('/',userRoutes);
 app.use('/api', productRoutes); // Product-related routes (e.g., add, fetch products)
 app.use('/api', cartRoutes); // Cart-related routes (e.g., add to cart, view cart)
+app.use('/api', environmentRoutes); // Environment Day form routes
+app.use('/api', readingRoutes); // Reading Day form routes
+
 
 
 // Database connection
