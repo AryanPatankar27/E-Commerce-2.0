@@ -2,18 +2,18 @@ import React from 'react';
 import { ShoppingCart, Star } from 'lucide-react';
 
 const products = [
-  { id: 1, name: 'Refrigerator', description: 'Energy-efficient with ample storage', price: 799.99, rating: 4.5 },
-  { id: 2, name: 'Washing Machine', description: 'Multiple wash cycles for all fabrics', price: 549.99, rating: 4.3 },
-  { id: 3, name: 'Microwave Oven', description: 'Quick and even heating', price: 129.99, rating: 4.2 },
-  { id: 4, name: 'Dishwasher', description: 'Quiet operation with great cleaning power', price: 399.99, rating: 4.6 },
-  { id: 5, name: 'Air Conditioner', description: 'Efficient cooling for any room size', price: 349.99, rating: 4.4 },
-  { id: 6, name: 'Vacuum Cleaner', description: 'Powerful suction on all surfaces', price: 199.99, rating: 4.3 },
-  { id: 7, name: 'Coffee Maker', description: 'Programmable brewing for perfect coffee', price: 79.99, rating: 4.5 },
-  { id: 8, name: 'Toaster Oven', description: 'Versatile for baking, toasting, and reheating', price: 89.99, rating: 4.1 },
-  { id: 9, name: 'Blender', description: 'Powerful motor for smooth blending', price: 69.99, rating: 4.2 },
-  { id: 10, name: 'Electric Kettle', description: 'Fast boiling with auto shut-off', price: 39.99, rating: 4.0 },
-  { id: 11, name: 'Food Processor', description: 'Multi-functional for all your prep needs', price: 149.99, rating: 4.4 },
-  { id: 12, name: 'Standing Mixer', description: 'Durable build for all your baking projects', price: 249.99, rating: 4.7 },
+  { id: 1, name: 'Refrigerator', description: 'Energy-efficient with ample storage', price: 799.99, rating: 4.5,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 2, name: 'Washing Machine', description: 'Multiple wash cycles for all fabrics', price: 549.99, rating: 4.3,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 3, name: 'Microwave Oven', description: 'Quick and even heating', price: 129.99, rating: 4.2,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 4, name: 'Dishwasher', description: 'Quiet operation with great cleaning power', price: 399.99, rating: 4.6,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 5, name: 'Air Conditioner', description: 'Efficient cooling for any room size', price: 349.99, rating: 4.4,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 6, name: 'Vacuum Cleaner', description: 'Powerful suction on all surfaces', price: 199.99, rating: 4.3,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 7, name: 'Coffee Maker', description: 'Programmable brewing for perfect coffee', price: 79.99, rating: 4.5,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 8, name: 'Toaster Oven', description: 'Versatile for baking, toasting, and reheating', price: 89.99, rating: 4.1,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 9, name: 'Blender', description: 'Powerful motor for smooth blending', price: 69.99, rating: 4.2,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 10, name: 'Electric Kettle', description: 'Fast boiling with auto shut-off', price: 39.99, rating: 4.0,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 11, name: 'Food Processor', description: 'Multi-functional for all your prep needs', price: 149.99, rating: 4.4,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 12, name: 'Standing Mixer', description: 'Durable build for all your baking projects', price: 249.99, rating: 4.7,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
 ];
 
 const StarRating = ({ rating }) => (

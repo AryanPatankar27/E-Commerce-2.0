@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
 
-const LoginPage = () => {
+const LoginPage = ({ setIsAuthenticated }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // For programmatic navigation
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/userlogins', {
+      const response = await fetch('http://localhost:5000/userlogin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,7 +27,8 @@ const LoginPage = () => {
 
       const data = await response.json();
       console.log('Login successful:', data);
-      // Handle successful login (e.g., store token, redirect)
+      setIsAuthenticated(true); // Update authentication state
+      navigate('/'); // Redirect to homepage on successful login
     } catch (err) {
       setError(err.message);
     }
@@ -131,9 +134,9 @@ const LoginPage = () => {
 
           <p className="mt-6 text-xs text-center text-gray-500">
             Don't have an account?{' '}
-            <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
               Sign up here
-            </a>
+            </Link>
           </p>
         </div>
       </div>

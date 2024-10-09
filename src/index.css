@@ -2,4 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add any additional global styles here */
+@layer base {
+  /* Define global styles for the light mode */
+  body {
+    --background: white;
+    --foreground: #0f172a; /* Slate-900 */
+    --card: white;
+    --card-foreground: #0f172a;
+    --popover: white;
+    --popover-foreground: #0f172a;
+    --primary: #1e293b; /* Slate-800 */
+    --primary-foreground: white;
+    --secondary: #e2e8f0; /* Slate-200 */
+    --secondary-foreground: #1e293b;
+    --muted: #e2e8f0;
+    --muted-foreground: #475569; /* Slate-500 */
+    --accent: #e2e8f0;
+    --accent-foreground: #1e293b;
+    --destructive: #f87171; /* Red-400 */
+    --destructive-foreground: white;
+    --border: #cbd5e1; /* Slate-300 */
+    --input: #cbd5e1;
+    --ring: #0f172a;
+    --radius: 0.5rem;
+  }
+
+  /* Define global styles for dark mode */
+  .dark body {
+    --background: #0f172a;
+    --foreground: white;
+    --card: #0f172a;
+    --card-foreground: white;
+    --popover: #0f172a;
+    --popover-foreground: white;
+    --primary: white;
+    --primary-foreground: #1e293b;
+    --secondary: #334155; /* Slate-700 */
+    --secondary-foreground: white;
+    --muted: #334155;
+    --muted-foreground: #94a3b8; /* Slate-400 */
+    --accent: #334155;
+    --accent-foreground: white;
+    --destructive: #b91c1c; /* Red-700 */
+    --destructive-foreground: white;
+    --border: #475569; /* Slate-500 */
+    --input: #475569;
+    --ring: #f1f5f9; /* Slate-100 */
+  }
+}
+
+@layer base {
+  /* Apply global Tailwind utilities */
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)];
+  }
+  .card {
+    @apply bg-[var(--card)] text-[var(--card-foreground)];
+  }
+  .popover {
+    @apply bg-[var(--popover)] text-[var(--popover-foreground)];
+  }
+  .border {
+    @apply border-[var(--border)];
+  }
+  .ring {
+    @apply ring-[var(--ring)];
+  }
+}

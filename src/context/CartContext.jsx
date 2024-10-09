@@ -26,14 +26,14 @@ const cartReducer = (state, action) => {
       }
       return { ...state, items: [...state.items, { ...action.payload, quantity: 1 }] };
     }
-
+    
     case 'REMOVE_ITEM': {
       return {
         ...state,
         items: state.items.filter(item => item.id !== action.payload),
       };
     }
-
+    
     case 'UPDATE_QUANTITY': {
       return {
         ...state,
@@ -44,11 +44,11 @@ const cartReducer = (state, action) => {
         ),
       };
     }
-
+    
     case 'CLEAR_CART': {
       return { ...state, items: [] };
     }
-
+    
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
   }
@@ -57,7 +57,7 @@ const cartReducer = (state, action) => {
 // CartProvider Component to wrap the app with Cart functionality
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
-
+  
   return (
     <CartContext.Provider value={{ state, dispatch }}>
       {children}
@@ -73,11 +73,11 @@ CartProvider.propTypes = {
 // Hook to use Cart Context
 export const useCart = () => {
   const context = useContext(CartContext);
-
+  
   if (!context) {
     throw new Error('useCart must be used within a CartProvider');
   }
-
+  
   return context;
 };
 

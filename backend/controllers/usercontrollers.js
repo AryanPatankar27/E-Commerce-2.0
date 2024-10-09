@@ -43,10 +43,10 @@ exports.userSignup = async (req, res) => {
 
 // User login controller
 exports.userLogin = async (req, res) => {
-    const { name, password } = req.body;
+    const { email, password } = req.body;
     try {
         // Find user by name
-        const user = await UserLogin.findOne({ name });
+        const user = await UserLogin.findOne({ email });
         if (!user) {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
@@ -57,7 +57,7 @@ exports.userLogin = async (req, res) => {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
 
-        return res.status(200).json({ message: 'Login successful', user: { name: user.name, email: user.email } });
+        return res.status(200).json({ message: 'Login successful', user: {  email: user.email } });
     } catch (error) {
         return res.status(500).json({ message: 'Server error', error: error.message });
     }

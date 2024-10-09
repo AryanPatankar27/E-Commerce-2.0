@@ -5,12 +5,12 @@ const userLoginSchema = new Schema({
     email: {
         type: String,
         required: true,
-        match: [/.+\@.+\..+/, 'Please enter a valid email address']
+        match: [/.+\@.+\..+/, 'Please enter a valid email address'],
     },
     password: {
         type: String,
         required: true,
-        minlength: 6
+        minlength: 6,
     }
 }, { timestamps: true });
 

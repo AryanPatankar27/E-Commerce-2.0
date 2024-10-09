@@ -5,18 +5,17 @@ const userSignupSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true,
-        match: [/.+\@.+\..+/, 'Please enter a valid email address']
+        match: [/.+\@.+\..+/, 'Please enter a valid email address'],
+        unique: true, // Ensure email is unique
     },
     name: {
         type: String,
         required: true,
-        minlength: 3
     },
     password: {
         type: String,
         required: true,
-        minlength: 6
+        minlength: 6,
     }
 }, { timestamps: true });
 

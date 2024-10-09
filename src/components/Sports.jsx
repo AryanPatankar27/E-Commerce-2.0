@@ -2,18 +2,18 @@ import React from 'react';
 import { ShoppingCart, Star } from 'lucide-react';
 
 const products = [
-  { id: 1, name: 'Basketball', description: 'Official size and weight for pro play', price: 29.99, rating: 4.5 },
-  { id: 2, name: 'Tennis Racket', description: 'Balanced for power and control', price: 89.99, rating: 4.3 },
-  { id: 3, name: 'Soccer Cleats', description: 'Excellent traction on all fields', price: 79.99, rating: 4.7 },
-  { id: 4, name: 'Yoga Mat', description: 'Non-slip surface for stability', price: 24.99, rating: 4.4 },
-  { id: 5, name: 'Dumbbells Set', description: 'Adjustable weights for home gym', price: 149.99, rating: 4.8 },
-  { id: 6, name: 'Golf Club Set', description: 'Complete set for beginners', price: 299.99, rating: 4.6 },
-  { id: 7, name: 'Swimming Goggles', description: 'Anti-fog lenses for clear vision', price: 19.99, rating: 4.2 },
-  { id: 8, name: 'Cycling Helmet', description: 'Lightweight and well-ventilated', price: 59.99, rating: 4.5 },
-  { id: 9, name: 'Boxing Gloves', description: 'Padded protection for training', price: 49.99, rating: 4.3 },
-  { id: 10, name: 'Fishing Rod', description: 'Telescopic design for easy transport', price: 69.99, rating: 4.1 },
-  { id: 11, name: 'Snowboard', description: 'All-mountain freestyle board', price: 249.99, rating: 4.6 },
-  { id: 12, name: 'Table Tennis Set', description: 'Includes net, paddles, and balls', price: 39.99, rating: 4.4 },
+  { id: 1, name: 'Basketball', description: 'Official size and weight for pro play', price: 29.99, rating: 4.5,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 2, name: 'Tennis Racket', description: 'Balanced for power and control', price: 89.99, rating: 4.3,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 3, name: 'Soccer Cleats', description: 'Excellent traction on all fields', price: 79.99, rating: 4.7,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 4, name: 'Yoga Mat', description: 'Non-slip surface for stability', price: 24.99, rating: 4.4,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 5, name: 'Dumbbells Set', description: 'Adjustable weights for home gym', price: 149.99, rating: 4.8,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 6, name: 'Golf Club Set', description: 'Complete set for beginners', price: 299.99, rating: 4.6,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 7, name: 'Swimming Goggles', description: 'Anti-fog lenses for clear vision', price: 19.99, rating: 4.2,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 8, name: 'Cycling Helmet', description: 'Lightweight and well-ventilated', price: 59.99, rating: 4.5,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 9, name: 'Boxing Gloves', description: 'Padded protection for training', price: 49.99, rating: 4.3,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 10, name: 'Fishing Rod', description: 'Telescopic design for easy transport', price: 69.99, rating: 4.1,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg', },
+  { id: 11, name: 'Snowboard', description: 'All-mountain freestyle board', price: 249.99, rating: 4.6 ,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
+  { id: 12, name: 'Table Tennis Set', description: 'Includes net, paddles, and balls', price: 39.99, rating: 4.4,image:'src/assets/Images/Appliances/WhatsApp Image 2024-10-08 at 23.09.58_5f297c84.jpg',},
 ];
 
 const StarRating = ({ rating }) => (

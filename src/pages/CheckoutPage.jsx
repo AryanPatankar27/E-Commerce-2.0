@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Change this line
+import { useNavigate } from 'react-router-dom'; 
 import useCart from '../hooks/useCart';
 
 const CheckoutPage = () => {
-  const navigate = useNavigate(); // Change this line
+  const navigate = useNavigate(); 
   const { state, dispatch } = useCart();
   const [formData, setFormData] = useState({
     name: '',
@@ -20,7 +20,7 @@ const CheckoutPage = () => {
     // Here you would typically send the order to your backend
     console.log('Order submitted:', { items: state.items, customer: formData });
     dispatch({ type: 'CLEAR_CART' });
-    navigate('/order-confirmation'); // Change this line
+    navigate('/order-confirmation'); 
   };
 
   const totalPrice = state.items.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -31,12 +31,16 @@ const CheckoutPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
-          {state.items.map((item) => (
-            <div key={item.id} className="flex justify-between items-center mb-2">
-              <span>{item.name} x {item.quantity}</span>
-              <span>${(item.price * item.quantity).toFixed(2)}</span>
-            </div>
-          ))}
+          {state.items.length === 0 ? (
+            <p>No items in the cart.</p>
+          ) : (
+            state.items.map((item) => (
+              <div key={item.id} className="flex justify-between items-center mb-2">
+                <span>{item.name} x {item.quantity}</span>
+                <span>${(item.price * item.quantity).toFixed(2)}</span>
+              </div>
+            ))
+          )}
           <div className="text-xl font-bold mt-4">Total: ${totalPrice.toFixed(2)}</div>
         </div>
         <div>
