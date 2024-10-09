@@ -27,31 +27,29 @@ const JoinGroup = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-      <Card className="shadow-lg rounded-lg max-w-md w-full">
-        <div className="text-center text-xl font-semibold mb-4">Join a Group</div>
-        <div className="space-y-4">
-          <Input
-            placeholder="Group ID"
-            value={groupId}
-            onChange={(e) => setGroupId(e.target.value)}
-            className="border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
-          />
-          <Input
-            placeholder="Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
-          />
-          <Button
-            onClick={handleJoinGroup}
-            className="w-full bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200"
-          >
-            Join Group
-          </Button>
-        </div>
-      </Card>
-    </div>
+    <Card className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold mb-4 text-[#3B82F6]">Join a Group</h2>
+      <Input
+        type="text"
+        placeholder="Enter Group ID"
+        value={groupId}
+        onChange={(e) => setGroupId(e.target.value)}
+        className="w-full mb-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent transition duration-200"
+      />
+      <Input
+        type="text"
+        placeholder="Enter your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="w-full mb-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent transition duration-200"
+      />
+      <Button
+        onClick={handleJoinGroup}
+        className="w-full bg-[#3B82F6] text-white py-2 rounded-md hover:bg-[#2563EB] transition duration-200"
+      >
+        Join Group
+      </Button>
+    </Card>
   );
 };
 

@@ -23,6 +23,8 @@ import CreateGroup from './components/CreateGroup.jsx';
 import GroupPage from './components/GroupPage.jsx';
 import JoinGroup from './components/JoinGroup.jsx';
 import Home from './components/Home.jsx'; // Group Shopping Home
+//import CheckoutPage from './components/CheckoutPage';
+import ReceiptPage from './components/ReceiptPage';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -63,6 +65,8 @@ const App = () => {
                   <Route path="/group-shopping" element={<ProtectedRoute><Home /></ProtectedRoute>} />
                   <Route path="/create-group" element={<ProtectedRoute><CreateGroup /></ProtectedRoute>} />
                   <Route path="/join" element={<ProtectedRoute><JoinGroup /></ProtectedRoute>} />
+                  <Route path="/checkout" element={<CheckoutPage />} />
+                  //<Route path="/receipt" element={<ReceiptPage />} />
 
                   {/* Social Activity Routes */}
                   <Route path="/social-activity" element={<ProtectedRoute><SocialActivity /></ProtectedRoute>} />
